@@ -21,7 +21,7 @@ export default function App({ specficTemplete }: IAppProps) {
   const router = useRouter();
   const handleClick = (item:any) => {
     setEmail({...email , operation : item.name})
-    router.push('/dashboard/templete')
+    router.push('/templete')
   }
   return (
     <div>

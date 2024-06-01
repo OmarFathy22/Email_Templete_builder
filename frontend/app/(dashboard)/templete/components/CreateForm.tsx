@@ -36,7 +36,7 @@ export default function App({
       setLoading(false);
       toast.success("Email sent successfully");
       setTimeout(() => {
-        location.href = "/dashboard";
+        location.href = "/";
       }, 1000);
     } catch (error) {
       console.error(error);

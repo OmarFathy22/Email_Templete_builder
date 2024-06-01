@@ -13,7 +13,7 @@ export const handleCreate = async (templete: EmailProps, setLoading: any) => {
     setLoading(false);
     toast.success("Email Created successfully");
     setTimeout(() => {
-      location.href = "/dashboard";
+      location.href = "/";
     }, 1000);
   } catch (error) {
     console.error("Error:", error);
@@ -33,7 +33,7 @@ export const handleUpdate = async (templete: EmailProps , setLoading:any) => {
     setLoading(false);
     toast.success("Email Updated successfully");
     setTimeout(() => {
-      location.href = "/dashboard";
+      location.href = "/";
     }, 1000);
   } catch (error) {
     console.error("Error:", error);
@@ -52,7 +52,7 @@ export const handleDelete = async (templete: EmailProps , setLoading:any) => {
     setLoading(false);
     toast.success("Email Deleted successfully");
     setTimeout(() => {
-      location.href = "/dashboard";
+      location.href = "/";
     }, 1000);
   } catch (error) {
     console.error("Error:", error);

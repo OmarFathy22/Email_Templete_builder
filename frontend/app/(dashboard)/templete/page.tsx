@@ -22,10 +22,10 @@ export default function App(props: IAppProps) {
     address:
       "{address} Ex: 470 Noor Ave STE B #1148, South San Francisco, CA 94080",
   });
-  const [selectedImage, setSelectedImage] = useState("");
   const [ImageFile, setImageFile] = useState(null); 
   const { email, setEmail } = useContext(EmailContext);
   const [updatingEmail, setUpdatingEmail] = useState<EmailProps>(email);
+  const [selectedImage, setSelectedImage] = useState(email?.operation == 'create' ? "" : email.image);
 
   const handleImageChange = (event: any) => {
     const file = event.target.files[0];
@@ -40,7 +40,7 @@ export default function App(props: IAppProps) {
       reader.readAsDataURL(file);
       setImageFile(file);
     } else {
-      setSelectedImage("/logo.webp");
+      setSelectedImage("");
     }
   };
   const handleUpload = async (setLoading:any) => {

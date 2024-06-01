@@ -41,7 +41,7 @@ export const KoalaWelcomeEmail = ({
   backgroundColor,
   subject
 }: EmailProps) => (
-  <div style={{ backgroundColor: backgroundColor}} className="bg-white mx-auto  p-10 rounded-sm min-h-[500px]">
+  <div style={{ backgroundColor: backgroundColor}} className="bg-white mx-auto min-w-[500px]  p-10 rounded-sm min-h-[500px]">
     <Preview>
       {subject}
     </Preview>
